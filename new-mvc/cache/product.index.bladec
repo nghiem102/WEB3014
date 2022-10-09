@@ -6,33 +6,42 @@
 <?php $this->startSection('title', 'Danh sách sản phẩm'); ?>
 
 <!-- yield(tên) ~ section(tên) nội dung endsection -->
-<?php $this->startSection('content-title', 'ABC'); ?>
+<?php $this->startSection('content-title', 'Sản phẩm'); ?>
 <?php $this->startSection('content'); ?>
 
-THƯ VIỆN BLADE ONE PHP2
-<!-- <?php echo $name ?> -->
-<!-- <?php echo $price ?> -->
-
-<!-- Với blade -->
-<?php echo \htmlentities($name??'', ENT_QUOTES, 'UTF-8', false); ?>
-
-<?php echo \htmlentities(strlen($name) > 2 ? "Do dai lon hon 2" : "Do dai nho hon 2"??'', ENT_QUOTES, 'UTF-8', false); ?>
-
-
-<?php echo \htmlentities($price??'', ENT_QUOTES, 'UTF-8', false); ?>
-
-<?php if($price > 10000000): ?>
- <p>Lon hon 10tr</p>
-<?php else: ?>
- <p>Nho hon 10 tr</p>
-<?php endif; ?>
-
-<ul>
- <?php $__currentLoopData = $array; $this->addLoop($__currentLoopData);$this->getFirstLoop();
- foreach($__currentLoopData as $item): $loop = $this->incrementLoopIndices();  ?>
- <li><?php echo \htmlentities($item??'', ENT_QUOTES, 'UTF-8', false); ?></li>
- <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
-</ul>
+<div class="box-body table-responsive no-padding">
+ <form action="" method="post">
+ <input type='hidden' name='<?php  echo '_token'; ?>' value='<?php echo $this->csrf_token; ?>'/>
+ <div class='row mb-2'>
+ <a class="text-sm underline col-6" style="color: black">Danh sách sản phẩm</a>
+ <div class="clearfix  col-4 text-center"><a href="productsadd" class="btn btn-primary">Thêm mới</a></div></div>
+ <div class="double-scroll">
+ <table class="table table-bordered">
+ <tr>
+ <th style="width: 90px" class="text-center">
+ Mã sản phẩm
+ </th>
+ <th class="text-center">Tên sản phẩm</th>
+ <th class="text-center">Giá sản phẩm</th>
+ <th class="text-center" style="width: 280px">Hình ảnh</th>
+ <th class="text-center" style="width: 280px">Mô tả</th>
+ <th class="text-center">Loại sản phẩm</th>
+ <th class="text-center">Trạng thái</th>
+ <th style="width: 90px" class="text-center">Hành động</th>
+ </tr>
+ <tr>
+ <td class="text-center">xx</td>
+ <td class="text-center"><a style="color:#333333;font-weight: bold;" href="" style="white-space:unset;text-align: justify;"> xx</a></td>
+ <td class="text-center"><a style="color:#ca4a4a;font-weight: bold;"> xx</a></td>
+ <td class="text-center"><img src="/img/<?php echo \htmlentities($item->hinh_anh_phong??'', ENT_QUOTES, 'UTF-8', false); ?>" style="height: 120px; width: 200px"></td>
+ <td class="text-center" style="width: 200px"><p>xx</p></td>
+ <td class="text-center">xx</td>
+ <td class="text-center">xx</td>
+ </tr>
+ </table>
+ </div>
+ </form>
+ </div>
 
 <?php $this->stopSection(); ?>
 

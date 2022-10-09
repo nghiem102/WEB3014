@@ -4,7 +4,7 @@
 // require_once 'App/Models/BaseModel.php';
 // require_once 'App/Models/Product.php';
 
-const BASE_URL = 'http://localhost/web3014/wE17202/new-mvc/';
+const BASE_URL = 'http://localhost/php2-web3014/WEB3014/new-mvc/';
 
 // Thay bằng require nhiều thì require autoload để nó làm tự đông
 require_once './vendor/autoload.php';

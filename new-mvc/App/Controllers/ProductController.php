@@ -22,4 +22,22 @@ class ProductController extends BaseController {
 
         return $this->render($viewName, $data);
     }
+    public function addProducts() {
+        // Hiển thị danh sách sản phẩm bằng render() của BladeOne
+        // file view ở new-mvc/App/Views/product/index.blade.php
+        $viewName = 'product.add';
+        // data view cần biến $name và $price
+        $data = [
+            'name' => 'Iphone 14',
+            'price' => 12000000,
+            'array' => [
+                'Xanh',
+                'Đỏ',
+                'Tím',
+                'Vàng'
+            ]
+        ];
+
+        return $this->render($viewName, $data);
+    }
 }
