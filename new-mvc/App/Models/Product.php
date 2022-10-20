@@ -6,7 +6,8 @@ namespace App\Models;
 // VD: where, join,...
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model {
+class Product extends Model
+{
     // Gán bảng cho đối tượng
     protected $table = 'products';
     protected $primaryKey = 'id';

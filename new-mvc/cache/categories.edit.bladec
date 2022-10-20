@@ -1,0 +1,39 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('title', 'Sửa danh mục'); ?>
+
+<?php $this->startSection('content-title', ' Sửa Danh mục'); ?>
+<?php $this->startSection('content'); ?>
+<!-- Phần nội dung riêng của action  -->
+<form class="form-horizontal " action="<?php echo \htmlentities(BASE_URL??'', ENT_QUOTES, 'UTF-8', false); ?>categories/update/<?php echo \htmlentities($categories->id??'', ENT_QUOTES, 'UTF-8', false); ?>" method="post" enctype="multipart/form-data">
+ <div class="box-body">
+ <a href="<?php echo \htmlentities(BASE_URL??'', ENT_QUOTES, 'UTF-8', false); ?>categories" class="text-sm text-gray-700 dark:text-gray-500 underline">Danh sách danh mục</a>
+ <a class="text-sm underline" style="color: black"> > Sửa danh mục</a>
+ <div class="row">
+ <div class="col-md-6" style="margin-top: 30px;">
+ <div class="form-group">
+ <label for="ten_san_pham" class="col-md-3 col-sm-4 control-label">Tên danh mục <span class="text-danger">(*)</span></label>
+
+ <div class="col-md-9 col-sm-8">
+ <input type="text" name="name" id="name" class="form-control" value="<?php echo \htmlentities($categories->name??'', ENT_QUOTES, 'UTF-8', false); ?>">
+ <span id="mes_sdt"></span>
+ </div>
+ </div>
+ <div class="form-group">
+ <label for="mo_ta" class="col-md-3 col-sm-4 control-label">Trạng thái <span class="text-danger">(*)</span></label>
+
+ <div class="col-md-9 col-sm-8">
+ <input type="radio" name="status" value="1" <?php echo \htmlentities($categories->status == 1 ? 'checked' : ''??'', ENT_QUOTES, 'UTF-8', false); ?>> Còn hàng
+ <input type="radio" name="status" value="0" <?php echo \htmlentities($categories->status == 0 ? 'checked' : ''??'', ENT_QUOTES, 'UTF-8', false); ?>> Hết hàng
+ </div>
+ </div>
+ </div>
+ </div>
+
+ </div>
+ <div style="margin-left: 166px">
+ <button class="btn btn-primary"> Sửa mới</button>
+ <a href="<?php echo \htmlentities(BASE_URL??'', ENT_QUOTES, 'UTF-8', false); ?>categories" class="btn btn-default">Hủy</a>
+ </div>
+</form>
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.master'); } ?>
