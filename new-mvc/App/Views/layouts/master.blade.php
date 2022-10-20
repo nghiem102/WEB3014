@@ -74,9 +74,9 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="/" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-chart-bar"></i>
               <p>
-                Dashboard
+                Thống kê
               </p>
             </a>
           </li>
@@ -84,15 +84,31 @@
             <a href="products" class="nav-link">
               <i class="nav-icon fas fa-list"></i>
               <p>
-                Products
+                Sản phẩm
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-columns"></i>
               <p>
-                Categories
+                Danh mục
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Đơn hàng
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Khách hàng
               </p>
             </a>
           </li>

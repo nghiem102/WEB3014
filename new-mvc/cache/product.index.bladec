@@ -12,34 +12,52 @@
 <div class="box-body table-responsive no-padding">
  <form action="" method="post">
  <input type='hidden' name='<?php  echo '_token'; ?>' value='<?php echo $this->csrf_token; ?>'/>
- <div class='row mb-2'>
- <a class="text-sm underline col-6" style="color: black">Danh sách sản phẩm</a>
- <div class="clearfix  col-4 text-center"><a href="productsadd" class="btn btn-primary">Thêm mới</a></div></div>
- <div class="double-scroll">
- <table class="table table-bordered">
+ <section class="content">
+ <div class="container-fluid">
+ <div class="row">
+ <div class="col-12">
+ <div class="card">
+ <!-- /.card-header -->
+ <div class="card-body">
+ <table class="table table-bordered table-striped  text-center">
+ <thead>
  <tr>
- <th style="width: 90px" class="text-center">
- Mã sản phẩm
- </th>
- <th class="text-center">Tên sản phẩm</th>
- <th class="text-center">Giá sản phẩm</th>
- <th class="text-center" style="width: 280px">Hình ảnh</th>
- <th class="text-center" style="width: 280px">Mô tả</th>
- <th class="text-center">Loại sản phẩm</th>
- <th class="text-center">Trạng thái</th>
- <th style="width: 90px" class="text-center">Hành động</th>
+ <th>ID</th>
+ <th>ProductTên sản phẩm</th>
+ <th>Giá</th>
+ <th>Ảnh</th>
+ <th>Danh mục</th>
+ <th>Trạng thái</th>
+ <th><a href="productsadd"><i class="far fa-plus-square" aria-hidden="true"></i></a></th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
- <td class="text-center">xx</td>
- <td class="text-center"><a style="color:#333333;font-weight: bold;" href="" style="white-space:unset;text-align: justify;"> xx</a></td>
- <td class="text-center"><a style="color:#ca4a4a;font-weight: bold;"> xx</a></td>
- <td class="text-center"><img src="/img/<?php echo \htmlentities($item->hinh_anh_phong??'', ENT_QUOTES, 'UTF-8', false); ?>" style="height: 120px; width: 200px"></td>
- <td class="text-center" style="width: 200px"><p>xx</p></td>
- <td class="text-center">xx</td>
- <td class="text-center">xx</td>
+ <td>xx></td>
+ <td>xx</td>
+ <td>xx</td>
+ <td>xx</td>
+ <td>xx</td>
+ <td>xx</td>
+ <td>
+ <a href="#"> <i class="fas fa-external-link-alt"></i></a>
+ <a href="#"><i class="fas fa-edit"></i></a>
+ <a onclick="return confirm('Bạn có chắc chắn muốn xóa môn học này')" href=""><i class="fas fa-trash"></i></a>
+ </td>
  </tr>
+ </tbody>
  </table>
  </div>
+ <!-- /.card-body -->
+ </div>
+ <!-- /.card -->
+ </div>
+ <!-- /.col -->
+ </div>
+ <!-- /.row -->
+ </div>
+ <!-- /.container-fluid -->
+ </section>
  </form>
  </div>
 
